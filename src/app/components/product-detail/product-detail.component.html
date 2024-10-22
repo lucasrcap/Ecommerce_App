@@ -1,0 +1,37 @@
+<!-- <nav class="narvar bg-dark">
+    <div class="conteiner-fluid">
+        <a class="navbar-brand" style="color:white; font-size: 35px;">Ecommerce Website</a>
+        <button routerLink="/" class="btn btn-warning text-light"
+            style="padding: 20px; margin-left: 955px;">BACK</button>
+    </div>
+</nav> -->
+
+<!--Single product display-->
+<div class="conteiner">
+    <div class="row product-detail">
+        <div class="col-sm-3">
+            <img class="product-image" src="{{productData?.images[0]}}">
+            <div>
+                <button class="btn btn-primary">Buy Now</button>&nbsp;
+                <button (click)="addToCart(productData)" *ngIf = "showAdd" class="btn btn-success">Add to Cart</button>&nbsp;
+                <button (click)="removeItem(productData)" *ngIf = "showRemove" class="btn btn-info">Remove Item</button>
+            </div>
+        </div>
+
+
+        <!--Right side-->
+        <div class="col-sm-8">
+            <div>
+                <h1>{{productData?.title}}</h1>
+                <p style="color:green;">Special Price</p>
+                <h3>{{productData?.price}} </h3>
+                <strong>Category:&nbsp;{{productData?.category}}</strong><br>
+                <strong>Description:</strong>
+                <p>{{productData?.description}}</p>
+                <p style="color:green;">Discount: {{productData?.discountPercentage}} %</p>
+                <strong>Stocks: {{productData?.stock}} Units left</strong><br>
+                <button routerLink="/" class="btn btn-warning text-light mt-2">BACK</button>
+            </div>
+        </div>
+    </div>
+</div>

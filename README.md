@@ -1,0 +1,2 @@
+Projeto feito em Angular 17, no qual o objetivo era a criação de um site de compras online, também chamado de ecommerce.
+É possivel ver os detalhes da mercadoria, adicionar os items no carrinho e confirmar a compra utilizando dados pessoais.

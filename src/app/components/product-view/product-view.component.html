@@ -1,0 +1,40 @@
+<!-- Header -->
+<!-- <div class="container-fluid" style="background-color:black;">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="header">
+                <h3 style="color:white;font-size:23px">Popular E-commerce products</h3>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Product Display  -->
+
+<div class="container-fluid" style="background-color: black;">
+    <div class="row">
+        <div class="col-md-2 mt-3" *ngFor = "let item of data?.products">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img routerLink="/product-detail/{{item.id}}" src="{{item.thumbnail}}" class="card-img-fluid">
+                    </div>
+                </div>
+
+                <div class="card-body bg-light text-center">
+                    <div>
+                        <h6 class="font-weight-semibold" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; ">
+                            <a class="text-default">{{item.title}}</a>
+                        </h6>
+                    </div>
+                    <h3 class="mb-0 font-weight-semibold">$ {{item.price}}</h3>
+                    <button routerLink="/product-detail/{{item.id}}" class="btn btn-sm btn-dark mt-2"> <i class="fa fa-solid fa-info mr-2"></i>&nbsp;&nbsp;view details</button>
+                    <button (click)="addToCart(item)" class="btn btn-sm btn-warning mt-2"> <i class="fa fa-cart-plus mr-2"></i>&nbsp; Add to cart</button>&nbsp;
+                    <button (click)="removeItem(item)" class="btn btn-sm btn-danger mt-2"> <i class="fa fa-remove mr-2"></i>&nbsp; Remove Item</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
